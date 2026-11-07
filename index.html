@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Guille Consulting</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Guille Consulting: digital marketing consulting, social media management and paid advertising services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: simple, light page. Two-column hero (message left, form card right) that stacks on phones; services as a plain list; legal text in one readable column. */
+:root{
+  --bg:#f6f6fd; --surface:#ffffff; --fg:#15143a; --muted:#5a5b82; --line:#e2e2f3;
+  --accent:#4f46e5; --accent-2:#9333ea; --accent-ink:#ffffff; --accent-soft:#efeefe; --sun:#a78bfa;
+  --ph:#fff0c4; --ph-fg:#5a4300; --ok:#15803d; --err:#b3261e;
+  --sans:"Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d0c1f; --surface:#17162f; --fg:#ecebff; --muted:#a7a6cf; --line:#2b2952;
+  --accent:#8b8cff; --accent-2:#c084fc; --accent-ink:#0d0c1f; --accent-soft:#24225a; --sun:#c084fc;
+  --ph:#4a3a07; --ph-fg:#ffe39a; --ok:#5fd39a; --err:#ff8f86; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d0c1f; --surface:#17162f; --fg:#ecebff; --muted:#a7a6cf; --line:#2b2952;
+  --accent:#8b8cff; --accent-2:#c084fc; --accent-ink:#0d0c1f; --accent-soft:#24225a; --sun:#c084fc;
+  --ph:#4a3a07; --ph-fg:#ffe39a; --ok:#5fd39a; --err:#ff8f86; color-scheme:dark}
+
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6}
+:root[data-lang="en"] .es, :root[data-lang="es"] .en{display:none!important}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.ph{background:var(--ph);color:var(--ph-fg);padding:0 .3em;border-radius:3px;font-family:var(--mono);font-size:.88em}
+h1,h2,h3{line-height:1.15;text-wrap:balance;margin:0;letter-spacing:-.02em}
+
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--bg)}
+header.top{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;text-decoration:none;color:var(--fg);margin-right:auto}
+.mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:var(--accent-ink);display:grid;place-items:center;font-size:15px;font-weight:800}
+nav.links{display:flex;gap:4px 16px;flex-wrap:wrap;font-size:14px;font-weight:500}
+nav.links a{color:var(--muted);text-decoration:none}
+nav.links a:hover{color:var(--fg)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:13px;font-weight:600}
+.lang button{border:0;background:transparent;color:var(--muted);padding:5px 11px;cursor:pointer;font:inherit}
+.lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+
+.hero{background:
+  radial-gradient(55% 45% at 15% 0%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%),
+  radial-gradient(55% 45% at 85% 5%, color-mix(in srgb, var(--accent-2) 20%, transparent), transparent 70%)}
+.hero .wrap{display:grid;justify-items:center;text-align:center;gap:32px;padding-block:64px 76px}
+@media (max-width:600px){.hero .wrap{padding-block:40px 52px;gap:24px}}
+.hero-copy{min-width:0;display:grid;justify-items:center;gap:18px;max-width:760px}
+.tag{justify-self:center;display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sun)}
+h1{font-size:clamp(30px,4.6vw,48px);font-weight:800}
+h1 u{text-decoration:none;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;color:var(--muted);margin:0;max-width:56ch}
+.points{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;font-weight:500;font-size:15px}
+.points li{display:flex;gap:8px;align-items:center}
+.points li::before{content:"✓";color:var(--accent);font-weight:800}
+
+.card{width:100%;max-width:580px;box-sizing:border-box;text-align:left;border:1.5px solid transparent;border-radius:20px;padding:28px;min-width:0;
+  background:linear-gradient(var(--surface),var(--surface)) padding-box, linear-gradient(135deg,var(--accent),var(--accent-2)) border-box;
+  box-shadow:0 20px 50px color-mix(in srgb, var(--accent-2) 18%, transparent)}
+@media (max-width:600px){.card{padding:20px}}
+.card h2,.card .sub{text-align:center}
+.card h2{font-size:20px;margin-bottom:4px}
+.card .sub{color:var(--muted);font-size:14px;margin:0 0 16px}
+form.consent{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+label.f{display:grid;gap:5px;font-size:13.5px;font-weight:600;min-width:0}
+label.f .req{color:var(--err)}
+input[type=text],input[type=email],input[type=tel],select{font:inherit;font-size:15px;font-weight:400;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);width:100%;box-sizing:border-box}
+.checks{display:grid;gap:10px;padding-top:4px;border-top:1px solid var(--line)}
+.check{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start;font-size:13px;line-height:1.5;padding-top:6px}
+.check input{width:16px;height:16px;margin:2px 0 0;accent-color:var(--accent)}
+.check b.r{color:var(--err)}
+.hint{color:var(--muted);font-size:12px;margin:0}
+.err{color:var(--err);font-size:14px;margin:0}
+.btn{font:inherit;font-weight:700;font-size:15px;border:0;border-radius:10px;padding:13px 20px;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:var(--accent-ink);cursor:pointer;box-shadow:0 8px 22px color-mix(in srgb, var(--accent) 30%, transparent)}
+.btn[disabled]{opacity:.4;cursor:not-allowed}
+.receipt{border:1px solid var(--ok);background:var(--accent-soft);border-radius:10px;padding:14px;font-size:14px;margin-top:14px}
+.receipt h3{margin:0 0 4px;font-size:16px;color:var(--ok)}
+.receipt pre{font-family:var(--mono);font-size:12px;white-space:pre-wrap;word-break:break-word;margin:8px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px;overflow-x:auto}
+
+section.band{padding-block:52px;border-top:1px solid var(--line)}
+h2.sec{font-size:clamp(24px,3.2vw,30px);font-weight:800;margin-bottom:22px}
+.svc-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:4px 40px;list-style:none;padding:0;margin:0}
+.svc-list li{padding:14px 0;border-bottom:1px solid var(--line);min-width:0}
+.svc-list b{display:block;font-size:16px}
+.svc-list span.d{color:var(--muted);font-size:15px}
+
+.legal{max-width:74ch}
+.legal .meta{font-family:var(--mono);font-size:12px;color:var(--muted);margin:-12px 0 16px}
+.legal h3{font-size:16px;margin:1.5em 0 .3em}
+.legal p,.legal li{font-size:15px}
+.legal ul{padding-left:1.2em}
+.dlg{width:min(760px, calc(100% - 32px));max-height:86vh;padding:0;border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--fg);box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.dlg::backdrop{background:rgba(8,18,14,.55)}
+.dlg .legal{padding:28px 24px 24px;max-width:none}
+.dlg .legal h2.sec{padding-right:40px}
+.dlg .x{position:sticky;top:10px;float:right;margin:10px 10px 0 0;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--fg);font-size:22px;line-height:1;cursor:pointer;z-index:1}
+.flinks a{font-weight:700;text-decoration:none}
+.flinks a:hover{text-decoration:underline}
+
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;font-size:15px}
+.contact b{display:block;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-block:24px 36px;font-size:13.5px;color:var(--muted)}
+footer .wrap{display:grid;gap:6px;justify-items:center;text-align:center}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">G</span>Guille Consulting</a>
+    <nav class="links" aria-label="Sections">
+      <a href="#services"><span class="es">Servicios</span><span class="en">Services</span></a>
+      <a href="#contact"><span class="es">Contacto</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="btn-es" data-set="es" aria-pressed="true">ES</button>
+      <button type="button" id="btn-en" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="tag"><span class="es">Agencia de marketing digital</span><span class="en">Digital marketing agency</span></span>
+        <h1><span class="es">Haz crecer tu negocio en <u>redes sociales</u> con una estrategia a tu medida</span><span class="en">Grow your business on <u>social media</u> with a strategy built for you</span></h1>
+        <p class="lead"><span class="es">Analizamos tu caso, creamos un plan de redes y publicidad, y te ayudamos a escalar.</span><span class="en">We study your case, build a social media and advertising plan, and help you scale.</span></p>
+        <ul class="points">
+          <li><span class="es">Consulta inicial gratuita</span><span class="en">Free initial consultation</span></li>
+          <li><span class="es">Estrategia personalizada para cada cliente</span><span class="en">A custom strategy for every client</span></li>
+          <li><span class="es">Servicio 100 % en línea</span><span class="en">100% online service</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2><span class="es">Agenda tu consulta</span><span class="en">Book your consultation</span></h2>
+        <p class="sub"><span class="es">Te contactamos en un máximo de 2 días hábiles.</span><span class="en">We will contact you within 2 business days.</span></p>
+        <form class="consent" id="consent-form" novalidate>
+          <div class="row">
+            <label class="f" for="f-first"><span><span class="es">Nombre</span><span class="en">First name</span> <span class="req">*</span></span><input type="text" id="f-first" autocomplete="given-name" required></label>
+            <label class="f" for="f-last"><span><span class="es">Apellido</span><span class="en">Last name</span></span><input type="text" id="f-last" autocomplete="family-name"></label>
+          </div>
+          <div class="row">
+            <label class="f" for="f-phone"><span><span class="es">Teléfono</span><span class="en">Phone</span> <span class="req">*</span></span><input type="tel" id="f-phone" autocomplete="tel" required></label>
+            <label class="f" for="f-email"><span>Email <span class="req">*</span></span><input type="email" id="f-email" autocomplete="email" required></label>
+          </div>
+          <label class="f" for="f-service"><span><span class="es">¿Qué necesitas?</span><span class="en">What do you need?</span> <span class="req">*</span></span>
+            <select id="f-service" required>
+              <option value="">—</option>
+              <option value="strategy">Estrategia / Strategy</option>
+              <option value="social">Redes sociales / Social media</option>
+              <option value="ads">Publicidad pagada / Paid ads</option>
+              <option value="all">Todo lo anterior / All of the above</option>
+            </select></label>
+
+          <div class="checks">
+            <label class="check" for="c-terms"><input type="checkbox" id="c-terms" required>
+              <span><b class="r">*</b> <span class="es">Acepto los <a href="#terms">Términos y Condiciones</a> y la <a href="#refunds">Política de Reembolso</a>.</span><span class="en">I agree to the <a href="#terms">Terms and Conditions</a> and the <a href="#refunds">Refund Policy</a>.</span></span></label>
+            <label class="check" for="c-privacy"><input type="checkbox" id="c-privacy" required>
+              <span><b class="r">*</b> <span class="es">He leído la <a href="#privacy">Política de Privacidad</a> y doy mi consentimiento para que Guille Consulting use mis datos para contactarme y prestar los servicios.</span><span class="en">I have read the <a href="#privacy">Privacy Policy</a> and consent to Guille Consulting using my information to contact me and provide the services.</span></span></label>
+            <label class="check" for="c-sms"><input type="checkbox" id="c-sms">
+              <span><span class="es">Opcional: acepto recibir mensajes de texto y llamadas de Guille Consulting sobre mi solicitud, citas y servicios. La frecuencia varía. Pueden aplicarse tarifas de mensajes y datos. Responde <b>STOP</b> para cancelar o <b>HELP</b> para ayuda. No es condición de compra.</span><span class="en">Optional: I agree to receive text messages and calls from Guille Consulting about my request, appointments and services. Message frequency varies. Message and data rates may apply. Reply <b>STOP</b> to cancel or <b>HELP</b> for help. Not a condition of purchase.</span></span></label>
+            <label class="check" for="c-marketing"><input type="checkbox" id="c-marketing">
+              <span><span class="es">Opcional: envíenme consejos y novedades por correo. Puedo darme de baja cuando quiera.</span><span class="en">Optional: send me tips and news by email. I can unsubscribe at any time.</span></span></label>
+            <p class="hint"><span class="es">* Obligatorio. Las casillas nunca vienen marcadas.</span><span class="en">* Required. Boxes are never pre-checked.</span></p>
+          </div>
+          <p class="err" id="form-err" hidden></p>
+          <button class="btn" type="submit" id="submit-btn" disabled><span class="es">Enviar</span><span class="en">Send</span></button>
+        </form>
+        <div class="receipt" id="receipt" hidden aria-live="polite">
+          <h3><span class="es">Consentimiento registrado</span><span class="en">Consent captured</span></h3>
+          <span class="es">Registro de lo que aceptaste y cuándo:</span><span class="en">Record of what you agreed to and when:</span>
+          <pre id="receipt-body"></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="services">
+    <div class="wrap">
+      <h2 class="sec"><span class="es">Servicios</span><span class="en">Services</span></h2>
+      <ul class="svc-list">
+        <li><b><span class="es">Consultoría y estrategia</span><span class="en">Consulting and strategy</span></b><span class="d"><span class="es">Diagnóstico de tu marca y un plan de crecimiento por escrito.</span><span class="en">A review of your brand and a written growth plan.</span></span></li>
+        <li><b><span class="es">Gestión de redes sociales</span><span class="en">Social media management</span></b><span class="d"><span class="es">Contenido y publicaciones en Instagram, Facebook, TikTok y LinkedIn.</span><span class="en">Content and posting on Instagram, Facebook, TikTok and LinkedIn.</span></span></li>
+        <li><b><span class="es">Publicidad pagada</span><span class="en">Paid advertising</span></b><span class="d"><span class="es">Campañas en Meta Ads, TikTok Ads y Google Ads.</span><span class="en">Campaigns on Meta Ads, TikTok Ads and Google Ads.</span></span></li>
+        <li><b><span class="es">Reportes y acompañamiento</span><span class="en">Reporting and coaching</span></b><span class="d"><span class="es">Informes mensuales y sesiones para escalar tu negocio.</span><span class="en">Monthly reports and sessions to help your business scale.</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <dialog class="dlg" id="terms">
+    <button class="x" type="button" data-close aria-label="Cerrar / Close">&times;</button>
+    <div class="legal">
+      <h2 class="sec"><span class="es">Términos y Condiciones</span><span class="en">Terms and Conditions</span></h2>
+      <p class="meta"><span class="es">Vigente desde el 7 de noviembre de 2026 · Versión 2026-11-07</span><span class="en">Effective November 7, 2026 · Version 2026-11-07</span></p>
+      <div class="es">
+        <p>Estos Términos rigen los servicios de GUILLE CONSULTING LLC, una compañía de responsabilidad limitada constituida en el estado de Florida, Estados Unidos ("nosotros"). Al enviar una solicitud, aceptar una propuesta o pagar nuestros servicios, tú ("el Cliente") aceptas estos Términos.</p>
+        <h3>1. Servicios y propuestas</h3><p>Prestamos servicios de consultoría de marketing digital, gestión de redes sociales y publicidad pagada. El alcance, los entregables y el precio de cada trabajo se fijan en una propuesta o factura por escrito que el Cliente acepta antes de empezar.</p>
+        <h3>2. Pagos</h3><p>Los pagos se procesan con Stripe. No vemos ni guardamos el número completo de tu tarjeta. Las facturas vencen en la fecha indicada.</p>
+        <h3>3. Servicios mensuales y renovación</h3><p>Si tu propuesta incluye un servicio mensual, se cobra por adelantado cada mes y se renueva automáticamente hasta que lo canceles. Al pagar, autorizas esos cobros. Te avisaremos por correo al menos 30 días antes de cualquier cambio de precio.</p>
+        <h3>4. Cancelación y reembolsos</h3><p>Puedes cancelar en cualquier momento escribiendo a <a href="mailto:soporte.guilleconsulting@gmail.com">soporte.guilleconsulting@gmail.com</a>; la cancelación surte efecto al final del periodo pagado. Los reembolsos siguen nuestra <a href="#refunds">Política de Reembolso</a>.</p>
+        <h3>5. Presupuesto publicitario</h3><p>Nuestros honorarios no incluyen el dinero invertido en anuncios. El Cliente lo paga directamente a Meta, TikTok, Google u otras plataformas.</p>
+        <h3>6. Mensajes de texto</h3><p>Si das tu consentimiento, te enviaremos SMS sobre tu solicitud, citas y servicios. La frecuencia varía y pueden aplicarse tarifas de mensajes y datos. Responde STOP para dejar de recibirlos o HELP para ayuda. Los operadores no son responsables de mensajes retrasados o no entregados.</p>
+        <h3>7. Sin resultados garantizados</h3><p>Los resultados de marketing dependen de factores fuera de nuestro control. No garantizamos cifras concretas de seguidores, ventas o retorno publicitario.</p>
+        <h3>8. Propiedad y confidencialidad</h3><p>Una vez pagado, el Cliente es dueño de los entregables creados para él. Ambas partes mantendrán confidencial la información no pública de la otra.</p>
+        <h3>9. Limitación de responsabilidad</h3><p>En la medida que permita la ley, nuestra responsabilidad total se limita a lo que el Cliente nos pagó en los 3 meses anteriores a la reclamación.</p>
+        <h3>10. Disputas</h3><p>Si tienes un problema con un cargo, escríbenos primero a <a href="mailto:soporte.guilleconsulting@gmail.com">soporte.guilleconsulting@gmail.com</a>. Respondemos en 2 días hábiles.</p>
+        <h3>11. Ley aplicable y cambios</h3><p>Estos Términos se rigen por las leyes del estado de Florida. Si los cambiamos, actualizaremos la versión y la fecha indicadas arriba.</p>
+      </div>
+      <div class="en">
+        <p>These Terms govern the services of GUILLE CONSULTING LLC, a limited liability company organized in the State of Florida, United States ("we", "us"). By submitting a request, accepting a proposal or paying for our services, you ("Client") agree to these Terms.</p>
+        <h3>1. Services and proposals</h3><p>We provide digital marketing consulting, social media management and paid advertising services. The scope, deliverables and price of each engagement are set out in a written proposal or invoice that the Client accepts before work begins.</p>
+        <h3>2. Payments</h3><p>Payments are processed by Stripe. We do not see or store your full card number. Invoices are due on the date shown.</p>
+        <h3>3. Monthly services and renewal</h3><p>If your proposal includes a monthly service, it is billed in advance each month and renews automatically until you cancel. By paying, you authorize those charges. We will email you at least 30 days before any price change.</p>
+        <h3>4. Cancellation and refunds</h3><p>You may cancel at any time by emailing <a href="mailto:soporte.guilleconsulting@gmail.com">soporte.guilleconsulting@gmail.com</a>; cancellation takes effect at the end of the paid period. Refunds follow our <a href="#refunds">Refund Policy</a>.</p>
+        <h3>5. Advertising budgets</h3><p>Our fees do not include ad spend. The Client pays Meta, TikTok, Google or other platforms directly.</p>
+        <h3>6. Text messages</h3><p>If you opt in, we will send SMS about your request, appointments and services. Message frequency varies and message and data rates may apply. Reply STOP to opt out or HELP for help. Carriers are not liable for delayed or undelivered messages.</p>
+        <h3>7. No guaranteed results</h3><p>Marketing results depend on factors outside our control. We do not guarantee specific followers, sales or ad returns.</p>
+        <h3>8. Ownership and confidentiality</h3><p>Once paid, the Client owns the deliverables created for it. Both parties will keep the other's non-public information confidential.</p>
+        <h3>9. Limitation of liability</h3><p>To the extent permitted by law, our total liability is limited to what the Client paid us in the 3 months before the claim.</p>
+        <h3>10. Disputes</h3><p>If you have a problem with a charge, please email us first at <a href="mailto:soporte.guilleconsulting@gmail.com">soporte.guilleconsulting@gmail.com</a>. We respond within 2 business days.</p>
+        <h3>11. Governing law and changes</h3><p>These Terms are governed by the laws of the State of Florida. If we change them, we will update the version and date above.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="dlg" id="privacy">
+    <button class="x" type="button" data-close aria-label="Cerrar / Close">&times;</button>
+    <div class="legal">
+      <h2 class="sec"><span class="es">Política de Privacidad</span><span class="en">Privacy Policy</span></h2>
+      <p class="meta"><span class="es">Vigente desde el 7 de noviembre de 2026 · Versión 2026-11-07</span><span class="en">Effective November 7, 2026 · Version 2026-11-07</span></p>
+      <div class="es">
+        <h3>Qué datos recopilamos</h3><p>Nombre, teléfono, correo, información sobre tu negocio, datos de facturación y el registro de tus consentimientos (qué aceptaste, versión y fecha). Los datos de tarjeta se introducen directamente en Stripe y nunca se guardan en nuestros sistemas.</p>
+        <h3>Para qué los usamos</h3><p>Para contactarte, agendar tu consulta, prestar los servicios, facturar, cumplir la ley y, solo si lo aceptaste, enviarte SMS o correos de marketing.</p>
+        <h3>Mensajes de texto</h3><p>Tu número de teléfono y tu consentimiento de SMS no se venden ni se comparten con terceros ni afiliados para fines de marketing. Solo los usan los proveedores que envían los mensajes en nuestro nombre.</p>
+        <h3>Con quién los compartimos</h3><p>No vendemos tus datos. Solo los compartimos con proveedores necesarios para operar (pagos con Stripe, correo, mensajería) o cuando la ley lo exige.</p>
+        <h3>Cookies</h3><p>Este sitio no usa cookies publicitarias ni de seguimiento. Solo recuerda el idioma que elegiste.</p>
+        <h3>Conservación</h3><p>Conservamos los registros de clientes el tiempo que exige la ley fiscal, normalmente 7 años. Las consultas que no se convierten en clientes se eliminan en 24 meses.</p>
+        <h3>Tus derechos</h3><p>Puedes pedir ver, corregir o eliminar tus datos, o retirar tu consentimiento, escribiendo a <a href="mailto:soporte.guilleconsulting@gmail.com">soporte.guilleconsulting@gmail.com</a>. Los residentes de California tienen derechos adicionales según la CCPA/CPRA. Respondemos en 30 días.</p>
+        <h3>Menores</h3><p>Nuestros servicios son para empresas y no están dirigidos a menores de 13 años.</p>
+      </div>
+      <div class="en">
+        <h3>What we collect</h3><p>Name, phone, email, information about your business, billing details and a record of your consents (what you agreed to, version and date). Card details are entered directly with Stripe and are never stored on our systems.</p>
+        <h3>How we use it</h3><p>To contact you, schedule your consultation, provide the services, bill you, comply with the law and, only if you opted in, send you SMS or marketing emails.</p>
+        <h3>Text messages</h3><p>Your phone number and SMS consent are not sold or shared with third parties or affiliates for marketing purposes. They are used only by the providers that send messages on our behalf.</p>
+        <h3>Sharing</h3><p>We do not sell your information. We share it only with providers we need to operate (payments with Stripe, email, messaging) or when required by law.</p>
+        <h3>Cookies</h3><p>This site does not use advertising or tracking cookies. It only remembers the language you chose.</p>
+        <h3>Retention</h3><p>We keep client records as long as tax law requires, generally 7 years. Inquiries that do not become clients are deleted within 24 months.</p>
+        <h3>Your rights</h3><p>You can ask to see, correct or delete your information, or withdraw consent, by emailing <a href="mailto:soporte.guilleconsulting@gmail.com">soporte.guilleconsulting@gmail.com</a>. California residents have additional rights under the CCPA/CPRA. We respond within 30 days.</p>
+        <h3>Children</h3><p>Our services are for businesses and are not directed to children under 13.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="dlg" id="refunds">
+    <button class="x" type="button" data-close aria-label="Cerrar / Close">&times;</button>
+    <div class="legal">
+      <h2 class="sec"><span class="es">Política de Reembolso</span><span class="en">Refund Policy</span></h2>
+      <ul class="es">
+        <li>Si cancelas antes de que empiece el trabajo, te devolvemos el 100 %.</li>
+        <li>En servicios mensuales, si cancelas dentro de los 7 días siguientes al primer pago y no se ha entregado trabajo, te devolvemos ese pago.</li>
+        <li>El trabajo ya entregado y las sesiones realizadas no son reembolsables.</li>
+        <li>El presupuesto publicitario se paga directamente a las plataformas y no lo reembolsamos nosotros.</li>
+        <li>Para solicitarlo, escribe a <a href="mailto:soporte.guilleconsulting@gmail.com">soporte.guilleconsulting@gmail.com</a>. Los reembolsos aprobados llegan al método de pago original en 5 a 10 días hábiles.</li>
+      </ul>
+      <ul class="en">
+        <li>If you cancel before work starts, we refund 100%.</li>
+        <li>For monthly services, if you cancel within 7 days of the first payment and no work has been delivered, we refund that payment.</li>
+        <li>Work already delivered and completed sessions are not refundable.</li>
+        <li>Ad spend is paid directly to the platforms and is not refundable by us.</li>
+        <li>To request a refund, email <a href="mailto:soporte.guilleconsulting@gmail.com">soporte.guilleconsulting@gmail.com</a>. Approved refunds reach the original payment method in 5 to 10 business days.</li>
+      </ul>
+    </div>
+  </dialog>
+
+  <section class="band" id="contact">
+    <div class="wrap">
+      <h2 class="sec"><span class="es">Contacto</span><span class="en">Contact</span></h2>
+      <div class="contact">
+        <div><b>Email</b><a href="mailto:soporte.guilleconsulting@gmail.com">soporte.guilleconsulting@gmail.com</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>©2026 GUILLE CONSULTING LLC · <span class="es">Todos los derechos reservados.</span><span class="en">All rights reserved.</span></div>
+    <div class="flinks"><a href="#privacy"><span class="es">Política de Privacidad</span><span class="en">Privacy Policy</span></a> - <a href="#terms"><span class="es">Términos y Condiciones</span><span class="en">Terms and Conditions</span></a> - <a href="#refunds"><span class="es">Política de Reembolso</span><span class="en">Refund Policy</span></a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var POLICY_VERSION = "2026-11-07";
+  function setLang(l){
+    root.setAttribute("data-lang", l);
+    root.lang = l;
+    document.getElementById("btn-en").setAttribute("aria-pressed", String(l === "en"));
+    document.getElementById("btn-es").setAttribute("aria-pressed", String(l === "es"));
+    try { localStorage.setItem("gc-lang", l); } catch(e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem("gc-lang"); } catch(e) {}
+  setLang("es");
+  document.querySelectorAll(".lang button").forEach(function(b){
+    b.addEventListener("click", function(){ setLang(b.dataset.set); });
+  });
+
+  var DLG = ["terms","privacy","refunds"];
+  function openDlg(id){
+    document.querySelectorAll("dialog.dlg[open]").forEach(function(d){ d.close(); });
+    var d = document.getElementById(id);
+    if (d && d.showModal) { d.showModal(); d.scrollTop = 0; }
+  }
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest("a[href^='#']");
+    if (a && DLG.indexOf(a.getAttribute("href").slice(1)) !== -1) {
+      e.preventDefault();
+      openDlg(a.getAttribute("href").slice(1));
+    }
+  });
+  document.querySelectorAll("dialog.dlg").forEach(function(d){
+    d.querySelector("[data-close]").addEventListener("click", function(){ d.close(); });
+    d.addEventListener("click", function(e){ if (e.target === d) d.close(); });
+  });
+  if (DLG.indexOf(location.hash.slice(1)) !== -1) openDlg(location.hash.slice(1));
+
+  var form = document.getElementById("consent-form");
+  var btn = document.getElementById("submit-btn");
+  var cTerms = document.getElementById("c-terms");
+  var cPrivacy = document.getElementById("c-privacy");
+  var errEl = document.getElementById("form-err");
+  function refresh(){ btn.disabled = !(cTerms.checked && cPrivacy.checked); }
+  form.addEventListener("change", refresh);
+  refresh();
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var es = root.getAttribute("data-lang") === "es";
+    var first = document.getElementById("f-first").value.trim();
+    var phone = document.getElementById("f-phone").value.trim();
+    var email = document.getElementById("f-email").value.trim();
+    var service = document.getElementById("f-service").value;
+    if (!first || phone.replace(/\D/g,"").length < 10 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !service) {
+      errEl.textContent = es
+        ? "Completa tu nombre, un teléfono de 10 dígitos, un correo válido y qué necesitas."
+        : "Enter your first name, a 10-digit phone number, a valid email and what you need.";
+      errEl.hidden = false;
+      return;
+    }
+    errEl.hidden = true;
+    var now = new Date();
+    var record = {
+      submitted_at_utc: now.toISOString(),
+      submitted_at_local: now.toString(),
+      first_name: first,
+      last_name: document.getElementById("f-last").value.trim(),
+      phone: phone,
+      email: email,
+      need: service,
+      policy_version: POLICY_VERSION,
+      language: es ? "es" : "en",
+      agreed_terms_and_refund_policy: cTerms.checked,
+      agreed_privacy_policy: cPrivacy.checked,
+      sms_and_calls_opt_in: document.getElementById("c-sms").checked,
+      marketing_emails_opt_in: document.getElementById("c-marketing").checked
+    };
+    // On your own domain, send `record` to your form service or CRM here.
+    document.getElementById("receipt-body").textContent = JSON.stringify(record, null, 2);
+    document.getElementById("receipt").hidden = false;
+  });
+})();
+</script>
+
+</body>
+</html>
